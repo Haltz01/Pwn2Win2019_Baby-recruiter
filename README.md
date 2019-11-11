@@ -1,5 +1,7 @@
-# Pwn2Win2019_Baby-recruiter Write-up
+# Pwn2Win2019_Baby-recruiter - Write-up
 Web challenge solved during Pwn2Win 2019 CTF (by Ganesh - USP)
+
+To see all the challenges we've solved check the [Ganesh Github repo](https://github.com/GANESH-ICMC/CTF-Writeups/tree/master/Pwn2Win-2019).
 
 ## Challenge description
 ```
