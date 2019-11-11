@@ -10,7 +10,7 @@ P.S.: the flag is not in default format, so add CTF-BR{} when you find it (leet 
 ```
 
 ## Write-up
-Firstly, the challenge gave us three files: Dockerfile, index.php e iptables.sh (there was also an setup.sh but it wasn't useful).
+Firstly, the challenge gave us three files: Dockerfile, index.php e iptables.sh (there was also a setup.sh but it wasn't useful).
 By looking at the Dockerfile we noticed that:
 1. It installed a version of prince that might have a vulnerability, such as [this one](https://www.corben.io/XSS-to-XXE-in-Prince/), but we were wrong. It didn't;
 2. The location of the flag (/etc/flag);
@@ -39,7 +39,7 @@ $IPT -A OUTPUT -p tcp -m multiport --sports 80 -m state --state ESTABLISHED     
 
 ```
 
-After trying some stuff, we noticed that in the index.php file, there was code used for debug uncommented:
+After trying some stuff, we noticed that in the index.php file, there was uncommented code used for debug :
 ``` php
 /* debug */
 $dom = new DOMDocument();
@@ -63,5 +63,6 @@ And the server asked us for this .dtd file:
 
 And this gave us the **flag**!
 
-Another way of solving it is available at [SigFlag Blog](https://www.sigflag.at/blog/2019/writeup-pwn2win-baby-recruiter/
-)
+
+*Another way of solving it is available at [SigFlag Blog](https://www.sigflag.at/blog/2019/writeup-pwn2win-baby-recruiter/
+)*
